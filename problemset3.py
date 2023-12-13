@@ -13,7 +13,9 @@ import sounddevice as sd # only needed for playing
 import soundfile as sf # only needed if playing does not work
 from scipy.io import loadmat
 from IPython.display import Audio
-from crosscor_sol import crosscor
+from sklearn.linear_model import LassoLars
+import matplotlib.pyplot as plt
+from scipy.fftpack import dct, idct
 
 problem= 'problem3_1'
 matdata = loadmat(f'{irname}.mat')
